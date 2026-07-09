@@ -1,0 +1,63 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : alu_top
+Version: X-2025.06-SP2
+Date   : Thu Jul  9 15:52:06 2026
+****************************************
+
+  Startpoint: op_b_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: inst_alu/value_reg[7] (rising edge-triggered flip-flop clocked by clk)
+  Mode: functional
+  Corner: default
+  Scenario: functional_default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  op_b_reg[0]/CK (HDB116LVT32_FSDPC1BQ_D_1)        0.00      0.00 r
+  op_b_reg[0]/Q (HDB116LVT32_FSDPC1BQ_D_1)         0.11      0.11 r
+  phfnr_buf_214/X (HDB116LVT32_INV_1)              0.09      0.20 f
+  A104/X (HDB116LVT32_OAI22_MM_0P5)                0.05      0.25 r
+  A170/CO (HDB116LVT32_ADDF_V1_0P5)                0.08      0.33 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_34/CO (HDB116LVT32_ADDF_V1_0P5)
+                                                   0.07      0.40 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_36/CO (HDB116LVT32_ADDF_V1_0P5)
+                                                   0.07      0.48 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_39/CO (HDB116LVT32_ADDF_V1_0P5)
+                                                   0.07      0.55 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_41/CO (HDB116LVT32_ADDF_V1_0P5)
+                                                   0.07      0.62 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_44/CO (HDB116LVT32_ADDF_V1_0P5)
+                                                   0.07      0.69 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/ctmi_29/X (HDB116LVT32_EN2_V2_1)
+                                                   0.03      0.72 r
+  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/ctmi_28/X (HDB116LVT32_EN2_V2_0P5)
+                                                   0.04      0.76 r
+  A103/X (HDB116LVT32_AO221_0P5)                   0.06      0.82 r
+  inst_alu/value_reg[7]/D (HDB116LVT32_FSDPQ_DLP_0P5)
+                                                   0.00      0.82 r
+  data arrival time                                          0.82
+
+  clock clk (rise edge)                           10.00     10.00
+  clock network delay (ideal)                      0.00     10.00
+  inst_alu/value_reg[7]/CK (HDB116LVT32_FSDPQ_DLP_0P5)
+                                                   0.00     10.00 r
+  clock uncertainty                               -0.10      9.90
+  library setup time                              -0.07      9.83
+  data required time                                         9.83
+  ------------------------------------------------------------------------
+  data required time                                         9.83
+  data arrival time                                         -0.82
+  ------------------------------------------------------------------------
+  slack (MET)                                                9.01
+
+
+1

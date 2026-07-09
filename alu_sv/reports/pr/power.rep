@@ -1,0 +1,62 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : alu_top
+Version: X-2025.06-SP2
+Date   : Thu Jul  9 15:56:58 2026
+****************************************
+Information: Activity for scenario functional_default was cached, no propagation required. (POW-005)
+Mode: functional
+Corner: default
+Scenario: functional_default
+Voltage: 0.72
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell inst_alu/value_reg[7] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell inst_alu/value_reg[7] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000515 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000362 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell op_a_reg[3] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000725 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell op_a_reg[3] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+
+  Cell Internal Power    = 4.22e+03 nW ( 73.7%)
+  Net Switching Power    = 1.51e+03 nW ( 26.3%)
+Total Dynamic Power      = 5.73e+03 nW (100.0%)
+
+Cell Leakage Power       = 1.58e+03 nW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             3.49e+03               0.00e+00               0.00e+00               3.49e+03    ( 47.7%)        i
+register                  4.05e+02               4.72e+02               6.51e+02               1.53e+03    ( 20.9%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             3.28e+02               1.03e+03               9.34e+02               2.30e+03    ( 31.4%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     4.22e+03 nW            1.51e+03 nW            1.58e+03 nW            7.31e+03 nW
+1

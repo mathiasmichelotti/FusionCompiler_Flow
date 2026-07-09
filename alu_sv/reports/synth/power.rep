@@ -1,0 +1,76 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : alu_top
+Version: X-2025.06-SP2
+Date   : Thu Jul  9 15:52:06 2026
+****************************************
+Information: Activity propagation will be performed for scenario functional_default.
+Information: Doing activity propagation for mode 'functional' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario functional_default (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Information: The stitching and editing of coupling caps is turned OFF for design 'work:alu_top.design'. (TIM-125)
+Information: Design Average RC for design alu_top  (NEX-011)
+Information: r = 6.795619 ohm/um, via_r = 9.003245 ohm/cut, c = 0.126661 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 7.893257 ohm/um, via_r = 8.850245 ohm/cut, c = 0.125672 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'alu_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 227, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 227, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Mode: functional
+Corner: default
+Scenario: functional_default
+Voltage: 0.72
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell inst_alu/value_reg[7] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell inst_alu/value_reg[7] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000057 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell sel_op_reg[1] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000038 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell sel_op_reg[0] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell op_a_reg[3] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000038 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell op_a_reg[3] for parameter Tinp. Lowest table value = 0.002921, highest table value = 0.485300, value = 0.000000 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 4.24e+03 nW ( 84.0%)
+  Net Switching Power    = 8.10e+02 nW ( 16.0%)
+Total Dynamic Power      = 5.05e+03 nW (100.0%)
+
+Cell Leakage Power       = 1.65e+03 nW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             3.49e+03               0.00e+00               0.00e+00               3.49e+03    ( 52.1%)        i
+register                  4.01e+02               2.87e+02               6.51e+02               1.34e+03    ( 20.0%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             3.49e+02               5.22e+02               1.00e+03               1.87e+03    ( 27.9%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     4.24e+03 nW            8.10e+02 nW            1.65e+03 nW            6.70e+03 nW
+1
