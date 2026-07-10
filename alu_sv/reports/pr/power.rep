@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Thu Jul  9 15:56:58 2026
+Date   : Fri Jul 10 11:07:24 2026
 ****************************************
 Information: Activity for scenario functional_default was cached, no propagation required. (POW-005)
 Mode: functional

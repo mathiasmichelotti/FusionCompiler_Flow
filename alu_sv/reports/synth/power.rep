@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Thu Jul  9 15:52:06 2026
+Date   : Fri Jul 10 11:02:48 2026
 ****************************************
 Information: Activity propagation will be performed for scenario functional_default.
 Information: Doing activity propagation for mode 'functional' and corner 'default' with effort level 'medium'. (POW-024)

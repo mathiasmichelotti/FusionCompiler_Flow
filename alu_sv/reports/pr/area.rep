@@ -1,23 +1,26 @@
 ****************************************
-Report : area
+Report : report_utilization
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Thu Jul  9 15:56:59 2026
+Date   : Fri Jul 10 11:07:25 2026
 ****************************************
+Utilization Ratio:			0.6160
+Utilization options:
+ - Area calculation based on:		site_row of block alu_top
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				187.2518
+Total Capacity Area:			187.2518
+Total Area of cells:			115.3411
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
 
-Number of ports:                           33
-Number of nets:                           230
-Number of cells:                          200
-Number of combinational cells:            172
-Number of sequential cells:                28
-Number of macros/black boxes:               0
-Number of buf/inv:                         27
-Number of references:                      42
+Utilization of site-rows with:
+ - Site 'unit':				0.6160
 
-Combinational area:                     67.57
-Buf/Inv area:                            4.68
-Noncombinational area:                  47.77
-Macro/Black Box area:                    0.00
-
-Total cell area:                       115.34
-1
+0.6160

@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Thu Jul  9 15:56:59 2026
+Date   : Fri Jul 10 11:07:25 2026
 ****************************************
 
   Startpoint: sel_op_reg[1] (rising edge-triggered flip-flop clocked by clk)
