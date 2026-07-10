@@ -17,7 +17,7 @@ lappend search_path ../scripts
 # Setup
 ################################################################################
 
-source setup.tcl
+source ../../fc_setup/globalfoundaries12lp/fc_setup.tcl
 
 ################################################################################
 # Parasitic Technology (TLU+)
@@ -27,18 +27,6 @@ puts ""
 puts "========================================"
 puts "Reading TLU+ Technology"
 puts "========================================"
-
-set TLUP_DIR \
-"/asic/pdk/globalfoundries/22FDX-PLUS/V1.0_3.4/PlaceRoute/ICC/TLUPlus/10M_2Mx_4Cx_2Bx_2Jx_LBthick"
-
-set TLUP_MAP \
-"/asic/ip/DesignWare_logic_libs/globalfoundaries22nhsp/32hd116/hdl/lvt/2.00a/demo/pnr/FC/input_files/tlup/layers.map"
-
-set TLUP_MAX \
-"$TLUP_DIR/22fdsoi_10M_2Mx_4Cx_2Bx_2Jx_LBthick_FuncRCmax_detailed.tluplus"
-
-set TLUP_MIN \
-"$TLUP_DIR/22fdsoi_10M_2Mx_4Cx_2Bx_2Jx_LBthick_FuncRCmin_detailed.tluplus"
 
 read_parasitic_tech \
     -tlup $TLUP_MAX \
