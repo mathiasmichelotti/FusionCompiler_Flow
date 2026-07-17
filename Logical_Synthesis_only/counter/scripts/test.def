@@ -1,0 +1,114 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+
+DESIGN counter ;
+
+UNITS DISTANCE MICRONS 1000 ;
+
+DIEAREA ( 0 0 ) ( 100000 100000 ) ;
+
+ROW ROW_0 unit 0    0    N DO 714 BY 1 STEP 120 0 ;
+ROW ROW_1 unit 0  720    N DO 714 BY 1 STEP 120 0 ;
+ROW ROW_2 unit 0 1440    N DO 714 BY 1 STEP 120 0 ;
+ROW ROW_3 unit 0 2160    N DO 714 BY 1 STEP 120 0 ;
+
+
+TRACKS X 70 DO 714 STEP 120 LAYER M1 ;
+TRACKS Y 450 DO 222 STEP 900 LAYER M2 ;
+
+PINS 12 ;
+
+- clk
+  + NET clk
+  + DIRECTION INPUT
+  + USE SIGNAL
+  + FIXED ( 10000 100000 ) N
+;
+
+- reset
+  + NET reset
+  + DIRECTION INPUT
+  + USE SIGNAL
+  + FIXED ( 25000 100000 ) N
+;
+
+- i_init
+  + NET i_init
+  + DIRECTION INPUT
+  + USE SIGNAL
+  + FIXED ( 40000 100000 ) N
+;
+
+- i_inc_dec
+  + NET i_inc_dec
+  + DIRECTION INPUT
+  + USE SIGNAL
+  + FIXED ( 55000 100000 ) N
+;
+
+- o_value[7]
+  + NET o_value[7]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 10000 0 ) S
+;
+
+- o_value[6]
+  + NET o_value[6]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 20000 0 ) S
+;
+
+- o_value[5]
+  + NET o_value[5]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 30000 0 ) S
+;
+
+- o_value[4]
+  + NET o_value[4]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 40000 0 ) S
+;
+
+- o_value[3]
+  + NET o_value[3]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 50000 0 ) S
+;
+
+- o_value[2]
+  + NET o_value[2]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 60000 0 ) S
+;
+
+- o_value[1]
+  + NET o_value[1]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 70000 0 ) S
+;
+
+- o_value[0]
+  + NET o_value[0]
+  + DIRECTION OUTPUT
+  + USE SIGNAL
+  + FIXED ( 80000 0 ) S
+;
+
+END PINS
+
+COMPONENTS 0 ;
+END COMPONENTS
+
+NETS 0 ;
+END NETS
+
+END DESIGN
