@@ -40,15 +40,12 @@ puts "========================================"
 puts "Reading TLU+ Technology"
 puts "========================================"
 
-
 read_parasitic_tech \
     -tlup $TLUP_MAX \
-    -layermap $TLUP_MAP \
     -name RCMAX
 
 read_parasitic_tech \
     -tlup $TLUP_MIN \
-    -layermap $TLUP_MAP \
     -name RCMIN
 
 ################################################################################
@@ -174,6 +171,8 @@ puts "========================================"
 puts "compile_fusion"
 puts "========================================"
 
+set_extraction_options -reference_direction horizontal
+
 compile_fusion
 
 
@@ -186,7 +185,7 @@ report_timing > ../reports/synth/timing.rep
 #read_def test.def
 initialize_floorplan \
     -site_def unit \
-    -core_utilization 0.6 \
+    -core_utilization 0.7 \
     -core_offset 2
 
 place_pins -self

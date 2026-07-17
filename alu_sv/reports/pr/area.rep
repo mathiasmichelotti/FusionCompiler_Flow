@@ -2,15 +2,15 @@
 Report : report_utilization
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Fri Jul 10 11:07:25 2026
+Date   : Fri Jul 17 07:36:55 2026
 ****************************************
-Utilization Ratio:			0.6160
+Utilization Ratio:			0.8895
 Utilization options:
  - Area calculation based on:		site_row of block alu_top
  - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
-Total Area:				187.2518
-Total Capacity Area:			187.2518
-Total Area of cells:			115.3411
+Total Area:				136.4429
+Total Capacity Area:			136.4429
+Total Area of cells:			121.3632
 Area of excluded objects:
  - hard_macros         :		0.0000
  - macro_keepouts      :		0.0000
@@ -21,6 +21,6 @@ Total Area of excluded objects:		0.0000
 Ratio of excluded objects:		0.0000
 
 Utilization of site-rows with:
- - Site 'unit':				0.6160
+ - Site 'unit':				0.8895
 
-0.6160
+0.8895

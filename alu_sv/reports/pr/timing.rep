@@ -6,11 +6,11 @@ Report : timing
         -report_by design
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Fri Jul 10 11:07:25 2026
+Date   : Fri Jul 17 07:36:55 2026
 ****************************************
 
-  Startpoint: sel_op_reg[1] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: inst_alu/value_reg[7] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: op_b_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: inst_alu/value_reg[6] (rising edge-triggered flip-flop clocked by clk)
   Mode: functional
   Corner: default
   Scenario: functional_default
@@ -20,45 +20,33 @@ Date   : Fri Jul 10 11:07:25 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
+  clock network delay (ideal)                     33.00     33.00
 
-  sel_op_reg[1]/CK (HDB116LVT32_FSDPC1BQ_D_1)      0.00      0.00 r
-  sel_op_reg[1]/Q (HDB116LVT32_FSDPC1BQ_D_1)       0.07      0.07 r
-  A61/X (HDB116LVT32_ND2B_MMF_0P5)                 0.10      0.17 f
-  ctmi_1204/X (HDB116LVT32_NR2_MM_0P5)             0.14      0.31 r
-  A83/X (HDB116LVT32_OAI22_0P5)                    0.13      0.45 f
-  A170/CO (HDB116LVT32_ADDF_V1_0P5)                0.10      0.55 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_34/CO (HDB116LVT32_ADDF_V1_0P5)
-                                                   0.08      0.63 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_36/CO (HDB116LVT32_ADDF_V1_0P5)
-                                                   0.08      0.71 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_39/CO (HDB116LVT32_ADDF_V1_0P5)
-                                                   0.09      0.80 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_41/CO (HDB116LVT32_ADDF_V1_0P5)
-                                                   0.08      0.88 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/U_44/CO (HDB116LVT32_ADDF_V1_0P5)
-                                                   0.07      0.95 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/ctmi_29/X (HDB116LVT32_EN2_V2_0P5)
-                                                   0.08      1.04 f
-  RS_OP_43_59090_59788_J1/DP_OP_41_41615_33690_J0/ctmi_28/X (HDB116LVT32_EN2_V2_0P5)
-                                                   0.07      1.10 f
-  A103/X (HDB116LVT32_AO221_0P5)                   0.07      1.18 f
-  inst_alu/value_reg[7]/D (HDB116LVT32_FSDPQ_DLP_0P5)
-                                                   0.00      1.18 f
-  data arrival time                                          1.18
+  op_b_reg[0]/CLK (SC7P5T_SDFFQX8_SSC14R)          0.00     33.00 r
+  op_b_reg[0]/Q (SC7P5T_SDFFQX8_SSC14R)           49.08     82.08 f
+  ctmTdsLR_1_2476/Z (SC7P5T_ND2IAX1_SSC14R)       27.87    109.94 r
+  ctmTdsLR_1_2432/CON (SC7P5T_FCGENIX1_SSC14R)    20.77    130.71 f
+  ropt_d_inst_4982/Z (SC7P5T_CKBUFX4_SSC14R)      20.62    151.33 f
+  A1465/Z (SC7P5T_OAI21X4_SSC14R)                 27.43    178.76 r
+  A1781/Z (SC7P5T_AOI21IAX2_SSC14R)               22.93    201.69 f
+  A1782/Z (SC7P5T_XNR2X1_ALS_SSC14R)              34.54    236.23 f
+  ctmTdsLR_4_2421/Z (SC7P5T_OAI211X1_SSC14R)      25.25    261.48 r
+  inst_alu/value_reg[6]/D (SC7P5T_SDFFQX0P5_A_SSC14R)
+                                                   0.42    261.90 r
+  data arrival time                                        261.90
 
   clock clk (rise edge)                           10.00     10.00
-  clock network delay (ideal)                      0.00     10.00
-  inst_alu/value_reg[7]/CK (HDB116LVT32_FSDPQ_DLP_0P5)
-                                                   0.00     10.00 r
-  clock uncertainty                               -0.10      9.90
-  library setup time                              -0.06      9.84
-  data required time                                         9.84
+  clock network delay (ideal)                    110.00    120.00
+  inst_alu/value_reg[6]/CLK (SC7P5T_SDFFQX0P5_A_SSC14R)
+                                                   0.00    120.00 r
+  clock uncertainty                               -0.10    119.90
+  library setup time                             -41.52     78.38
+  data required time                                        78.38
   ------------------------------------------------------------------------
-  data required time                                         9.84
-  data arrival time                                         -1.18
+  data required time                                        78.38
+  data arrival time                                        -261.90
   ------------------------------------------------------------------------
-  slack (MET)                                                8.66
+  slack (VIOLATED)                                         -183.52
 
 
 1

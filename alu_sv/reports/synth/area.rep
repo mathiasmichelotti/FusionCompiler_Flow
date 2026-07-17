@@ -2,22 +2,22 @@
 Report : area
 Design : alu_top
 Version: X-2025.06-SP2
-Date   : Fri Jul 10 11:02:49 2026
+Date   : Fri Jul 17 04:49:59 2026
 ****************************************
 
 Number of ports:                           33
-Number of nets:                           229
-Number of cells:                          199
-Number of combinational cells:            171
+Number of nets:                           410
+Number of cells:                          386
+Number of combinational cells:            358
 Number of sequential cells:                28
 Number of macros/black boxes:               0
-Number of buf/inv:                         27
-Number of references:                      55
+Number of buf/inv:                         83
+Number of references:                     106
 
-Combinational area:                     65.06
-Buf/Inv area:                            4.51
-Noncombinational area:                  47.77
+Combinational area:                     65.96
+Buf/Inv area:                            8.59
+Noncombinational area:                  33.30
 Macro/Black Box area:                    0.00
 
-Total cell area:                       112.84
+Total cell area:                        99.27
 1
