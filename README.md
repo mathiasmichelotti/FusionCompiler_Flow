@@ -133,7 +133,7 @@ Below is a summary of the technologies currently tested with Fusion Compiler.
 | **GlobalFoundries 22nm** | ✅ Fully working | All required files are available. The Fusion Compiler libraries (NDM) must be generated before running the flow. |
 | **GlobalFoundries 12LP** | ✅ Fully working | All required files are available. The Fusion Compiler libraries (NDM) must be generated before running the flow. |
 | **Intel 18A GLP** | ⚠️ Partially working | Intel provides the required NDM libraries, so there is no need to generate them. However, the PDK does not include TLU+ files, making the physical synthesis flow incomplete. |
-| **Samsung 8nm** | ⚠️ Partially working | The Fusion Compiler libraries (NDM) must be generated before running the flow. In addition, the PDK does not include TLU+ files, making the physical synthesis flow incomplete. |
+| **Samsung 08nv** | ⚠️ Partially working | The Fusion Compiler libraries (NDM) must be generated before running the flow. In addition, the PDK does not include TLU+ files, making the physical synthesis flow incomplete. |
 | **Older technologies (AMS 0.35 µm, AMS 0.18 µm, etc.)** | ❌ Not supported for physical synthesis | These PDKs do not provide the required TLU+, technology (`.tf`), or `frame_only.ndm` files, making physical synthesis impossible in Fusion Compiler. |
 
 ### Logical Synthesis Only
