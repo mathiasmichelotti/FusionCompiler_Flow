@@ -121,3 +121,23 @@ Without this mapping, Fusion Compiler cannot associate the parasitic models with
 | **Timing .ndm** | Combined physical and timing library used by Fusion Compiler |
 | **TLU+** | Interconnect parasitic models (R and C) |
 | **layers.map** | Maps TLU+ layer names to technology layer names |
+
+
+
+## Current Progress
+
+Below is a summary of the technologies currently tested with Fusion Compiler.
+
+| Technology | Status | Notes |
+|------------|--------|-------|
+| **GlobalFoundries 22nm** | ✅ Fully working | All required files are available. The Fusion Compiler libraries (NDM) must be generated before running the flow. |
+| **GlobalFoundries 12LP** | ✅ Fully working | All required files are available. The Fusion Compiler libraries (NDM) must be generated before running the flow. |
+| **Intel 18A GLP** | ⚠️ Partially working | Intel provides the required NDM libraries, so there is no need to generate them. However, the PDK does not include TLU+ files, making the physical synthesis flow incomplete. |
+| **Older technologies (AMS 0.35 µm, AMS 0.18 µm, etc.)** | ❌ Not supported for physical synthesis | These PDKs do not provide the required TLU+, technology (`.tf`), or `frame_only.ndm` files, making physical synthesis impossible in Fusion Compiler. |
+
+### Logical Synthesis Only
+
+Logical synthesis using only Liberty (`.db`) libraries has been investigated, and the corresponding Tcl scripts are available in the `Logical_Synthesis_only` directory as a starting point.
+
+However, Fusion Compiler still expects Fusion-compatible reference libraries (NDM) during `compile_logical`. Although `generate_fusion_libs` can generate Fusion libraries from Liberty databases, this flow is not yet fully functional for legacy PDKs. Consequently, logical synthesis is currently considered experimental for older technologies.
+
