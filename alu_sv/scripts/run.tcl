@@ -2,6 +2,8 @@
 # Fusion Compiler Tutorial Flow
 ################################################################################
 
+set_host_options -max_cores 8
+
 ################################################################################
 # Search Path
 ################################################################################
@@ -23,13 +25,23 @@ set REPORT_DIR ../reports
 set PR_DIR    $REPORT_DIR/pr
 set SYNTH_DIR $REPORT_DIR/synth
 
-
+################################################################################
+# Choose the technology
+################################################################################
+set techno "22n"
 
 ################################################################################
 # Setup
 ################################################################################
 
-source ../../fc_setup/globalfoundaries12lp/fc_setup.tcl
+if {$techno == "12lp"} {
+    source ../../fc_setup/globalfoundaries12lp/fc_setup.tcl
+} elseif {$techno == "22n"} {
+    source ../../fc_setup/globalfoundaries22nhsp/fc_setup.tcl
+} else {
+    source ../../fc_setup/intel18aglp/fc_setup.tcl
+}
+
 
 ################################################################################
 # Parasitic Technology (TLU+)
@@ -57,9 +69,13 @@ puts "========================================"
 puts "RTL Analysis"
 puts "========================================"
 
-analyze -format sv pck_control.sv
-analyze -format sv alu.sv
-analyze -format sv alu_top.sv
+#analyze -format sv pck_control.sv
+#analyze -format sv alu.sv
+#analyze -format sv alu_top.sv
+
+set DESIGN_NAME alu_top
+
+analyze -autoread -recursive -top $DESIGN_NAME rtl/
 
 ################################################################################
 # Elaboration
@@ -70,9 +86,9 @@ puts "========================================"
 puts "Elaboration"
 puts "========================================"
 
-elaborate alu_top
+elaborate $DESIGN_NAME
 
-set_top_module alu_top
+set_top_module $DESIGN_NAME
 
 ################################################################################
 # Design Information
