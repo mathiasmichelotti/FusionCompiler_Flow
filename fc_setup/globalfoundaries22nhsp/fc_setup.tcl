@@ -15,12 +15,34 @@ set LIB_DIR "/asic/ip/DesignWare_logic_libs/globalfoundaries22nhsp/32hd116/hdl/l
 set TECH_FILE \
 "$LIB_DIR/ndm/tf/gf22nspllogl32hdl116f_7M_2Mx_4Cx_1Ox_LB.tf"
 
+
+
+################################################################################
+# TLUPlus files
+################################################################################
+set TLUP_DIR \
+"/asic/pdk/globalfoundries/22FDX-PLUS/V1.0_3.4/PlaceRoute/ICC2/TLUPlus"
+
+set TLU_NAME "9M_2Mx_4Cx_2Ix_1Ox_LBthick"
+
+
+set TLUP_MAP \
+"/asic/pdk/globalfoundries/22FDX-PLUS/V1.0_3.4/DFM/DRCplus/LPA/PM/layer.map"
+
+set TLUP_MAX \
+"$TLUP_DIR/${TLU_NAME}/22fdsoi_${TLU_NAME}_FuncRCmax_detailed.tluplus"
+
+set TLUP_MIN \
+"$TLUP_DIR/${TLU_NAME}/22fdsoi_${TLU_NAME}_FuncRCmin_detailed.tluplus"
+
+
+
 ################################################################################
 # Reference library (generated with Library Manager)
 ################################################################################
 
 # Use YOUR generated NDM
-set REF_LIB "./gf22nspllogl32hdl116f_frame_timing_ccs.ndm"
+set REF_LIB "../../fc_setup/globalfoundaries22nhsp/gf22nspllogl32hdl116f_frame_timing_ccs.ndm"
 
 # Alternatively:
 # set REF_LIB "$LIB_DIR/ndm/gf22nspllogl32hdl116f_frame_timing_ccs.ndm"
