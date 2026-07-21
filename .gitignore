@@ -1,4 +1,5 @@
 work/
 
 #libraries 
-fc_setup/
+fc_setup/globalfoundaries12lp/IN12LP_SC7P5T_84CPP_BASE_SSC14R_frame_timing_ccs.ndm
+fc_setup/globalfoundaries22nhsp/gf22nspllogl32hdl116f_frame_timing_ccs.ndm
